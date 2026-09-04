@@ -1,5 +1,4 @@
 # Product-Sales-Performance-over-time
-# Liquor Sales Analysis and visualization
 ![](Product_Sales_Pic.png)
 
 ## Project Overview
