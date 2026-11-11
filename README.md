@@ -100,14 +100,61 @@ df.loc[df["Possible_Outier"] < 0]
 
 ### I used heatmap to determine correlation strength between numeric variable 
 
-**REPORT : The Higher the total number of piece sold the higher the profit and total sales.
-         : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returend
-           is not caused base on how many of the product they buy or rating of this product.
-         : There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
+**REPORT : The Higher the total number of piece sold the higher the profit and total sales.**
+
+         **: There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returned
+           is not caused base on how many of the product they buy or rating of this product.**
+           
+         **: There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
            dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.**
+           
 ![](product_sales_heatmap.png) 
 
-## Python Data Visulaization
+## Entity Relationship Diagram
+I added primary key constraint to uniquely identify records in product, warehouse, and geography table. then added foreign keys to sales table to create a star schema relationship across tables  
+```
+# ADDING PRIMARY KEY TO GEOGRAPHY TABLE
+ALTER TABLE geography
+ADD PRIMARY KEY (GeographyKey);
+
+# ADDING PRIMARY KEY TO PRODUCT TABLE
+ALTER TABLE product
+MODIFY COLUMN Product_ID varchar(10);
+ALTER TABLE product
+ADD PRIMARY KEY (Product_ID);
+
+# ADDING PRIMARY KEY TO WAREHOUSE TABLE
+ALTER TABLE ware_house
+MODIFY COLUMN Warehouse_ID varchar(10);
+ALTER TABLE ware_house
+ADD PRIMARY KEY (Warehouse_ID);
+
+#ADDING FOREIGN KEY TO SALES LOG TABLE
+ALTER TABLE sales_log
+MODIFY COLUMN Product_ID varchar(10);
+ALTER TABLE sales_log
+ADD CONSTRAINT product_sale
+FOREIGN KEY (Product_ID)
+REFERENCES product (Product_ID);
+
+ALTER TABLE sales_log
+MODIFY COLUMN `Dest. Warehouse` Varchar(10);
+ALTER TABLE sales_log
+ADD CONSTRAINT sales_wareH
+FOREIGN KEY (`Dest. Warehouse`)
+REFERENCES ware_house (Warehouse_ID);
+
+ALTER TABLE sales_log
+ADD CONSTRAINT sales_geograpy
+FOREIGN KEY (Geograpy_Key)
+REFERENCES geography (GeographyKey);
+
+ALTER TABLE sales_log
+MODIFY COLUMN Order_ID varchar(10);
+ALTER TABLE sales_log
+ADD unique (Order_ID);
+```
+![](product_sales_heatmap.png) 
 
 ### Data Modelling
 The dataset is structured as a standalone table without relational connections to other tables, meaning it does not follow a star or snowflake schema. However, it is linked to the date table for time-based analysis.
