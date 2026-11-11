@@ -36,7 +36,7 @@ The data set used for ths project is gotten from kaggle
 - Exploratory data analysis
 - Python data visulaization
      - Seaborn
-     - Matplotlip.pyplot\
+     - Matplotlip.pyplot
      - Plotly.express
 - Object orientated peograming system (Abstraction & Inheritance
 - Pandas
@@ -56,7 +56,7 @@ The data set used for ths project is gotten from kaggle
    - Page Navigation
    - Bookmark Navigation
 
-### Data Cleaning
+## Data Cleaning
 
 I used the data cleaning library i created to converted data types to ensure consistency, rename columns to SQL Standard format for the analysis, removed unnecessary columns to reduce redundancy.
 
@@ -65,6 +65,7 @@ I used the data cleaning library i created to converted data types to ensure con
 Renaming Column                            |                         Converting data sype
 :-----------------------------------------:|:------------------------------------------:
 ![](changing_columname.png)                |         ![](changing_datatype.png)
+
 
 
 **Data cleaning in MySQL**
@@ -76,8 +77,9 @@ SET Product_Link = "https://www.pngkey.com/png/detail/80-801028_langham-30mm-bla
 WHERE Product_ID = 'P013';
 ```
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 I Used sns.histplot to determine how spread out total sales are 
+
 **REPORT: Total Sales Data is Right Skwed , it has more or peak data point at the left then a long tail at the right, With it mean(33076.77) greater than the median(29190.0) it deduced that there is significant lower sales and a fewer very high sales**
 ![](product_sales_histplot.png)  
 
@@ -85,13 +87,14 @@ I Used sns.histplot to determine how spread out total sales are
 I used BOX plot to summarized the distribution of sales in different states category
 **REPORT: The mean or 50% percentile falls between 30000 total sales and a significate amount of possible outlier that shows the histogram distribution to be right skewed**
 ![](product_sales_boxplot.png) 
-# TRYING TO DETERMINE IF OUTLIERS ARE TRUE OUTLIERS AND DOESNT NEED TO BE ELIMINATED
+**_TRYING TO DETERMINE IF OUTLIERS ARE TRUE OUTLIERS AND DOESNT NEED TO BE ELIMINATED_**
 ```
 df["Possible_Outier"] = df["Total_No._of_Pieces"] - df["No._of_pieces_sold"]
 df.loc[df["Possible_Outier"] < 0]
 
 "REPORT: It is a True Outlier, The States has true higher sales this may be influenced by promotion, or holiday events"
 ```
+
 
 I used heatmap to determine correlation strength between numeric variable 
 **REPORT : The Higher the total number of piece sold the higher the profit and total sales.
