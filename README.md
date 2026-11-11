@@ -2,41 +2,63 @@
 ![](Product_Sales_Pic.png)
 
 ## Project Overview
-This project analyzes sales data to understand revenue distribution across different counties and products. The focus is on identifying the highest and lowest-performing counties, comparing their contributions to total sales, and examining the factors driving these differences. Population density, urbanization, and the presence of entertainment venues play a crucial role in sales performance, with urbanized counties contributing significantly more revenue.
+This project analyzes Product sales data to understand revenue distribution across different State and products. The focus is on identifying how shipment delays affect total returns, comparing sales contributions in state across Years, months, and weeks and examining the factors driving these differences. Population density and urbanization.
 
-Additionally, the project explores product-level sales trends, identifying the best-selling products and those with seasonal demand fluctuations. While some products maintain steady sales throughout the year, others experience sharp increases during specific periods, such as holidays. Understanding these patterns provides valuable insights into consumer purchasing behavior and market trends.
+Additionally, the project explores product-level sales trends, identifying the best-selling products across state examining factor droving it such as rating, seasonal trendy outfit etc. and how some products are the top performing product but steadly are the most returned product across state. Understanding these patterns provides valuable insights into consumer purchasing behavior and market trends.
 
 By leveraging data analysis and visualization, this project offers a comprehensive view of how sales are distributed across locations and product categories, helping businesses and stakeholders make informed decisions.
 
 ## Data Source
-The data set used for ths project is gotten from kaggle [Click Here](https://www.kaggle.com/datasets/residentmario/iowa-liquor-sales)
+The data set used for ths project is gotten from kaggle 
 
 ## Problem Statement
 
-- Which product  generates the highest sales, and how does its performance compare to the lowest-performing product in terms of revenue and volume?
-- Which county contributes the most to total sales, how does its performance compare to the lowest-performing county and what are the contributing factor?
-- Which stores generate the highest revenue, and what factors contribute to their performance?
-- How do monthly sales trends fluctuate, and are there specific days that consistently generate higher sales?
+**Product Sales Problem Statement**
+-Which are the top 10 best-selling products based on total sales revenue, and what are their average customer ratings, return rates, and return categories? how do customer ratings and product returns relate to their sales performance and ranking among the top 10 products?
+- Which are the top 5 most-returned products based on total return volume, what are their associated delivery-delay risks, and how does delivery delay influence the likelihood of these products being returned?
+- What are the month-over-month (MoM) growth rates in total sales revenue, profit, and order volume, and how have these key business performance indicators changed over state?
+- What is the average shipping delay (in days), and how does it compare between orders classified as having a delivery delay risk (Yes) and those without a delay risk (No)?
+
+**Performance over time**
+- How have sales performed over time, what is the average monthly sales revenue, and what are the month-over-month (MoM) sales growth rates?
+- How have product returns changed over time, what is the average monthly return volume, and which months recorded the highest and lowest returns?
+- How does sales performance vary across states over time, and what are the month-over-month (MoM) sales growth rates for each state?
+- How does sales performance vary across the days of the week, and which day contributes the highest proportion of total sales revenue?
 
 ## Tools
 - MySQL
+- Python
 - Power Bi
 
 ## Skills Demonstrated
 
 - Data Cleaning
-- Data Modelling
+- Exploratory data analysis
+- Python data visulaization
+     - Seaborn
+     - Matplotlip.pyplot\
+     - Plotly.express
+- Object orientated peograming system (Abstraction & Inheritance
+- Pandas
+- Entity Relationship Daiagram
 - Data Analysis
+  - Common Table Expression
+  - Aggreate, Text, Windows function
+  - Subquery
+  - Case Statement
+  - Triggers
+- Data Modelling
 - Visualization
    - tooltip
    - DAX
    - Quick Measure
    - filters
    - Page Navigation
+   - Bookmark Navigation
 
 ### Data Cleaning
 
-I converted data types to ensure consistency. I thoroughly cleaned the store name column by removing attached addresses, numbers, and excess spaces. I removed unnecessary columns to reduce redundancy. To validate data quality and identify errors, I conducted checks for data validity. I also performed exploratory data analysis to examine distinct values and detect null values, confirming that the dataset was error-free and had no missing data.
+I used the data cleaning library i created to converted data types to ensure consistency, rename columns to SQL Standard format for the analysis, removed unnecessary columns to reduce redundancy.
 
 **Data cleaning in power bi (power query)**
 
