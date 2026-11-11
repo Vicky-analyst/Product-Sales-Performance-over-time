@@ -85,8 +85,10 @@ I Used sns.histplot to determine how spread out total sales are
 
 
 I used BOX plot to summarized the distribution of sales in different states category
+
 **REPORT: The mean or 50% percentile falls between 30000 total sales and a significate amount of possible outlier that shows the histogram distribution to be right skewed**
 ![](product_sales_boxplot.png) 
+
 **_TRYING TO DETERMINE IF OUTLIERS ARE TRUE OUTLIERS AND DOESNT NEED TO BE ELIMINATED_**
 ```
 df["Possible_Outier"] = df["Total_No._of_Pieces"] - df["No._of_pieces_sold"]
@@ -97,6 +99,7 @@ df.loc[df["Possible_Outier"] < 0]
 
 
 I used heatmap to determine correlation strength between numeric variable 
+
 **REPORT : The Higher the total number of piece sold the higher the profit and total sales.
          : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returend
            is not caused base on how many of the product they buy or rating of this product.
