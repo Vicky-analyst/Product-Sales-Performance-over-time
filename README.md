@@ -100,13 +100,13 @@ df.loc[df["Possible_Outier"] < 0]
 
 ### I used heatmap to determine correlation strength between numeric variable 
 
-**REPORT : The Higher the total number of piece sold the higher the profit and total sales.
+REPORT : The Higher the total number of piece sold the higher the profit and total sales.
 
          : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returned
            is not caused base on how many of the product they buy or rating of this product.
            
          : There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
-           dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.**
+           dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.
            
 ![](product_sales_heatmap.png) 
 
@@ -159,9 +159,10 @@ ADD unique (Order_ID);
 ### Data Modelling
 The data sets create a star schema relationship consisting of a central sales table connected to dimensions table which are warehouse, product and geography.
 
-![](Product_Sales_EDR.png)
+![](product_sales_data_model.png))
 
-### Data Analysis And Insight
+## Data Analysis And Insight
+## Product Sales
 
 - American vodkas consistently generate the highest monthly revenue, exceeding $3.5 million and accounting for 13.7% of total sales across 54 products. They also maintain a strong monthly demand of 14%. In contrast, cocktails and imported vodkas rank as the lowest-performing products, with a significantly lower demand of just 0.0005%. However, while top-selling products maintain steady demand year-round, certain products, such as temporary specials and cream liqours, experience a significant surge in sales during the holiday season.
 **MySQL Analysis Result (Filter June 2021)**
