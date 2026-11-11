@@ -107,6 +107,7 @@ df.loc[df["Possible_Outier"] < 0]
            dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.**
 ![](product_sales_heatmap.png) 
 
+## Python Data Visulaization
 
 ### Data Modelling
 The dataset is structured as a standalone table without relational connections to other tables, meaning it does not follow a star or snowflake schema. However, it is linked to the date table for time-based analysis.
