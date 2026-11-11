@@ -100,12 +100,12 @@ df.loc[df["Possible_Outier"] < 0]
 
 ### I used heatmap to determine correlation strength between numeric variable 
 
-**REPORT : The Higher the total number of piece sold the higher the profit and total sales.**
+**REPORT : The Higher the total number of piece sold the higher the profit and total sales.
 
-         **: There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returned
-           is not caused base on how many of the product they buy or rating of this product.**
+         : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returned
+           is not caused base on how many of the product they buy or rating of this product.
            
-         **: There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
+         : There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
            dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.**
            
 ![](product_sales_heatmap.png) 
@@ -154,12 +154,12 @@ MODIFY COLUMN Order_ID varchar(10);
 ALTER TABLE sales_log
 ADD unique (Order_ID);
 ```
-![](product_sales_heatmap.png) 
+![](Product_Sales_EDR.png) 
 
 ### Data Modelling
-The dataset is structured as a standalone table without relational connections to other tables, meaning it does not follow a star or snowflake schema. However, it is linked to the date table for time-based analysis.
+The data sets create a star schema relationship consisting of a central sales table connected to dimensions table which are warehouse, product and geography.
 
-![](Data_Model.png)
+![](Product_Sales_EDR.png)
 
 ### Data Analysis And Insight
 
