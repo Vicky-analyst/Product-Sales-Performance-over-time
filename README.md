@@ -64,7 +64,7 @@ I used the data cleaning library i created to converted data types to ensure con
 
 Renaming Column                            |                         Converting data sype
 :-----------------------------------------:|:------------------------------------------:
-![](changing_columname.png)                |         ![](changing_datatype.png
+![](changing_columname.png)                |         ![](changing_datatype.png)
 
 
 **Data cleaning in MySQL**
@@ -78,7 +78,28 @@ WHERE Product_ID = 'P013';
 
 ### Exploratory Data Analysis
 I Used sns.histplot to determine how spread out total sales are 
-![](changing_columname.png)   
+**REPORT: Total Sales Data is Right Skwed , it has more or peak data point at the left then a long tail at the right, With it mean(33076.77) greater than the median(29190.0) it deduced that there is significant lower sales and a fewer very high sales**
+![](product_sales_histplot.png)  
+
+
+I used BOX plot to summarized the distribution of sales in different states category
+**REPORT: The mean or 50% percentile falls between 30000 total sales and a significate amount of possible outlier that shows the histogram distribution to be right skewed**
+![](product_sales_boxplot.png) 
+# TRYING TO DETERMINE IF OUTLIERS ARE TRUE OUTLIERS AND DOESNT NEED TO BE ELIMINATED
+```
+df["Possible_Outier"] = df["Total_No._of_Pieces"] - df["No._of_pieces_sold"]
+df.loc[df["Possible_Outier"] < 0]
+
+"REPORT: It is a True Outlier, The States has true higher sales this may be influenced by promotion, or holiday events"
+```
+
+I used heatmap to determine correlation strength between numeric variable 
+**REPORT : The Higher the total number of piece sold the higher the profit and total sales.
+         : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returend
+           is not caused base on how many of the product they buy or rating of this product.
+         : There is a correlation between weight of the product and selling price, base on the fact that the product is clothing, it can be 
+           dedued that the greater the weight of the cloth the more quality and colthing it is hence the higher price.**
+![](product_sales_heatmap.png) 
 
 
 ### Data Modelling
