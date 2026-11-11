@@ -78,13 +78,13 @@ WHERE Product_ID = 'P013';
 ```
 
 ## Exploratory Data Analysis
-I Used sns.histplot to determine how spread out total sales are 
+### I Used sns.histplot to determine how spread out total sales are 
 
 **REPORT: Total Sales Data is Right Skwed , it has more or peak data point at the left then a long tail at the right, With it mean(33076.77) greater than the median(29190.0) it deduced that there is significant lower sales and a fewer very high sales**
 ![](product_sales_histplot.png)  
 
 
-I used BOX plot to summarized the distribution of sales in different states category
+### I used BOX plot to summarized the distribution of sales in different states category
 
 **REPORT: The mean or 50% percentile falls between 30000 total sales and a significate amount of possible outlier that shows the histogram distribution to be right skewed**
 ![](product_sales_boxplot.png) 
@@ -98,7 +98,7 @@ df.loc[df["Possible_Outier"] < 0]
 ```
 
 
-I used heatmap to determine correlation strength between numeric variable 
+### I used heatmap to determine correlation strength between numeric variable 
 
 **REPORT : The Higher the total number of piece sold the higher the profit and total sales.
          : There is no significant correlation between total piece return to No. of pieces sold and avg rating, which means product returend
