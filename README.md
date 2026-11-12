@@ -162,39 +162,45 @@ The data sets create a star schema relationship consisting of a central sales ta
 ![](product_sales_data_model.png))
 
 ## Data Analysis And Insight
-## Product Sales
+### Product Sales Analysis
 
-- American vodkas consistently generate the highest monthly revenue, exceeding $3.5 million and accounting for 13.7% of total sales across 54 products. They also maintain a strong monthly demand of 14%. In contrast, cocktails and imported vodkas rank as the lowest-performing products, with a significantly lower demand of just 0.0005%. However, while top-selling products maintain steady demand year-round, certain products, such as temporary specials and cream liqours, experience a significant surge in sales during the holiday season.
-**MySQL Analysis Result (Filter June 2021)**
-  ![](Product_anal.png)
-  
-- Polk County leads in total sales, generating $60 million monthly and accounting for over 21% of total sales among 100 counties. It dominates the top 10 highest-performing counties, while lower-performing counties like Fremont and Davis contribute just 0.012%.
-  
-  **MySQL Analysis Result (Filter April 2021)**
-  ![](County_Analy.png)
-  
-   #### The key factors driving Top 10 high sales include:
-   **Population Density & Urbanization** -> The top 10 highest-selling counties are primarily urbanized, featuring more entertainment venues, restaurants, and nightlife hotspots. Cities like Des Moines, Davenport, and Cedar Rapids see increased alcohol demand due to their vibrant social scenes.
-  
-  [**Airticle Link**](https://www.extension.iastate.edu/news/navigating-demographic-shifts-new-report-unveils-iowas-changing-urban-and-rural-populations?)
-  ![](urban_cause.png)
-  
-   **Demographics & Store Distribution** –> A higher population density leads to more liquor stores being strategically located across the county, further driving overall sales.
-- Hy-Vee Food Store generates the highest revenue, exceeding $3.6 million monthly, and accounts for 13.04% of total sales among the top 10 performing stores. this Top 10 store are located in county with great population density & urbanization like Plok, Scott, Linn etc, They also have on Avg 27000 Per Capita Income . thus explains why they are the top performing stores compared to stores least performing located in the rural county areas like Adams, Fremont and Davis
+Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product across all state generating over 120M which account for about 40% total sales.
 
-**MySQL Analysis Result (Filter September 2021)**
- ![](Store_Analy.png)
+#### Possible Factor ->
+
+**Population & Urban lifestyle ->**  The state are urbanized by which it's driven more by metropolitan fashion and every day wear hence fashion clothes are the most sold compare to seasonal clothing
+**Income & Office Culture ->** Higher concentration of professional workers may increase demand for blazers as part of business casual wardrobes
+**MySQL Analysis Result (Filter by California)**
+  ![](product_sales_1.png)
+
+  
+- Men's Tshirt, Men's Poloshirt, Men's Jeans, Men's Jacket and Mens's Shirt are the common most returned product with a return category between high return rate and critical return rate and despict Men's Tshirt, Men's Jeans, Men's Jacket and Mens's Shirt are among the top 10 Most sold clothe and strong customers ratings across all state they are still the most return prodoct, with illinois showing unusual high returns despite comparative lower sales  indicating a potential state specific fulfillment or customer behaviour issue that merits further investigation
+  
+#### possible factor -> 
+
+**shipment delays ->** Men's Jacket, jeans, blazers, shirt  amongst other product as the highest delays risk of avg 3 days shipment delays
+**Inconsistent post purchase issue ->** High customer ratings indicate product satisfaction, while high return volume suggest post purchases issue such as sizing, fit, rather than poor product quality
+  
+**MySQL Analysis Result (Filter by FLORIDA)**
+  ![](product_sale_2.png)
+  
+   
+- Four of the five state generated the strongest revenue during Q2 ( may- June )and again in Q4 indicating recurring seasonal sales spike across the retail business. illinois generate one time sales surge in April but failed to sustain demand for the rest of the year , making it the only major state without a meaningful recovery after its peak month.
+  
+#### Possible factors ->
+
+ **Seasonal Trend ->** With the most sold product being fashion and casual fit this only deduced that seasonal demand surge sales at mid year slow down then renew Q4 growth across most major state
+
+**MySQL Analysis Result (Filter by FLORIDA)**
+ ![](product_sales_3.png)
  
-  [**Airticle Link**](https://en.wikipedia.org/wiki/List_of_Iowa_locations_by_per_capita_income?)
-  ![](Per_Capita.png)
   
-- Monthly sales have fluctuated throughout the year but showed a steady increase in the fourth quarter. December 2021 recorded the highest sales of the year at $42 million, reflecting a $4 million increase from the previous month. **Wednesday** Cummulative Sales generate the highest sales at every second month of each quarter, Report shows wednesday to the most hectic service day in the United State
+- All State has a no shipment delay of about 73% above 
   
-**MySQL Analysis Result (Filter September 2021)**
- ![](Wed_Analy.png)  
+**MySQL Analysis Result (Filter by FLORIDA)**
+ ![](product_sales_4.png)  
   
-  [**Airticle Link**](https://www.pipedrive.com/en/blog/whats-the-best-weekday-to-sell-infographic?)
-  ![](Wed-Airticle.png)
+
   
 **To interacte with the Iowa Sales Analysis In MySQL**
 [Click Here](liquor_analysis.sql)
