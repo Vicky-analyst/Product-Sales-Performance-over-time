@@ -260,7 +260,7 @@ This visualization highlights key insights from the sales data, showcasing trend
 ![](product_sales_time_dashboard.png)
 
 **To interacte with the Iowa Liquor Dashboard**
-[Click Here](https://app.powerbi.com/groups/me/reports/21995906-657b-4704-9b00-44314d20f83b/8b551faf76e189e5424d?experience=power-bi)
+[Click Here](Product_Sales_Report.pbix)
 
 
 ### Python Viualization
@@ -282,25 +282,20 @@ Sales by week Trend                       |           Product with high delay ri
 
 ## Recommendation
 
-- **Ensure Consistent Supply of High-Demand Products**
-   Since American vodkas contribute the highest sales, maintaining stable inventory levels will prevent stockouts and meet customer demand. Temporary specials and cream       liquors should also be well-stocked during holiday periods to capitalize on seasonal spikes.
+-  Investigate why top product are being returned  particularly men's jackets, jeans, short and other repeatedly returned
+  
+-  product Address shipping delays on high demand product,investigate whether delays are occuring because of inventory shortages, warehouse capacity or specific state
 
-- **Strengthen Sales in Low-Performing Counties**
-   Sales in counties like Fremont and Davis are significantly lower. Conducting targeted promotions, adjusting product selection, or improving store accessibility in these     areas could help increase sales.
+-  investigate llionois separately to understand why there is massive drop in demand, subsequent sales decline, return rate, shipping delays
+optimize inventory for seasonal demand
 
-- **Leverage Urban Market Growth**
-   Polk County leads in sales due to its urbanization and high number of entertainment venues. Expanding distribution in similar high-density areas could further boost revenue.
+## Limitations of the Analysis
 
-- **Optimize Inventory and Marketing for Seasonal Trends**
-   Sales increase during the fourth quarter, especially in December. Planning inventory and marketing campaigns around this trend can maximize revenue during peak periods.
+1. **Insufficient Data to Explain Sales Trends:** The available dataset does not contain sufficient information to investigate the underlying causes of certain sales trends and monthly spikes. As a result, some explanations provided for changes in sales performance are based on possible contributing factors rather than verified causes.
 
-- **Improve Store Placement for Higher Visibility**
-   Sales data suggests that areas with more liquor stores generate higher revenue. Strategically placing new stores in high-traffic locations can further drive sales.
+2. **Lack of Financial Cost Data:** The dataset does not provide sufficient cost and expense information to accurately calculate net profit, profit margins or profit growth. This limits the financial assessment of the business's overall profitability.
 
-- **Use Data to Refine Sales Strategies**
-   Regularly analyzing sales trends by product, county, and season can help optimize pricing, stock levels, and promotional efforts, ensuring a data-driven approach to    increasing revenue.
-
-
+3. **Lack of Customer-Level Information:** The absence of detailed customer data limits the ability to analyse customer purchasing behaviour and purchasing power. It also makes it difficult to identify the underlying reasons for product returns, particularly among top-selling products.
 
 
 
