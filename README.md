@@ -203,7 +203,7 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
   
 **MySQL Analysis Result (Filter by FLORIDA)**
 
- ![](product_sales_4.png)  
+![](product_sales_4.png)  
   
 
 ### Performance Overtime Analysis
