@@ -1,4 +1,4 @@
-# Product-Sales-Performance-over-time
+<img width="206" height="191" alt="image" src="https://github.com/user-attachments/assets/aea466da-e9ce-4e5f-af6a-ed4db27f68bf" /># Product-Sales-Performance-over-time
 ![](Product_Sales_Pic.png)
 
 ## Project Overview
@@ -14,6 +14,7 @@ The data set used for ths project is gotten from kaggle
 ## Problem Statement
 
 **Product Sales Problem Statement**
+
 -Which are the top 10 best-selling products based on total sales revenue, and what are their average customer ratings, return rates, and return categories? how do customer ratings and product returns relate to their sales performance and ranking among the top 10 products?
 - Which are the top 5 most-returned products based on total return volume, what are their associated delivery-delay risks, and how does delivery delay influence the likelihood of these products being returned?
 - What are the month-over-month (MoM) growth rates in total sales revenue, profit, and order volume, and how have these key business performance indicators changed over state?
@@ -169,9 +170,11 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
 #### Possible Factor ->
 
 **Population & Urban lifestyle ->**  The state are urbanized by which it's driven more by metropolitan fashion and every day wear hence fashion clothes are the most sold compare to seasonal clothing
+
 **Income & Office Culture ->** Higher concentration of professional workers may increase demand for blazers as part of business casual wardrobes
+
 **MySQL Analysis Result (Filter by California)**
-  ![](product_sales_1.png)
+![](product_sales_1.png)
 
   
 - Men's Tshirt, Men's Poloshirt, Men's Jeans, Men's Jacket and Mens's Shirt are the common most returned product with a return category between high return rate and critical return rate and despict Men's Tshirt, Men's Jeans, Men's Jacket and Mens's Shirt are among the top 10 Most sold clothe and strong customers ratings across all state they are still the most return prodoct, with illinois showing unusual high returns despite comparative lower sales  indicating a potential state specific fulfillment or customer behaviour issue that merits further investigation
@@ -179,10 +182,11 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
 #### possible factor -> 
 
 **shipment delays ->** Men's Jacket, jeans, blazers, shirt  amongst other product as the highest delays risk of avg 3 days shipment delays
+
 **Inconsistent post purchase issue ->** High customer ratings indicate product satisfaction, while high return volume suggest post purchases issue such as sizing, fit, rather than poor product quality
   
 **MySQL Analysis Result (Filter by FLORIDA)**
-  ![](product_sale_2.png)
+![](product_sale_2.png)
   
    
 - Four of the five state generated the strongest revenue during Q2 ( may- June )and again in Q4 indicating recurring seasonal sales spike across the retail business. illinois generate one time sales surge in April but failed to sustain demand for the rest of the year , making it the only major state without a meaningful recovery after its peak month.
@@ -192,22 +196,55 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
  **Seasonal Trend ->** With the most sold product being fashion and casual fit this only deduced that seasonal demand surge sales at mid year slow down then renew Q4 growth across most major state
 
 **MySQL Analysis Result (Filter by FLORIDA)**
- ![](product_sales_3.png)
+![](product_sales_3.png)
  
   
-- All State has a no shipment delay of about 73% above 
+- Approximately 72%–74% of orders across all states experienced no shipment delays, indicating relatively consistent shipping performance across geographical locations. However, the remaining 26%–28% of orders experienced delays, highlighting an opportunity to investigate product-specific and fulfilment-related delays.
   
 **MySQL Analysis Result (Filter by FLORIDA)**
+
  ![](product_sales_4.png)  
   
 
+### Performance Overtime Analysis
+
+- Overall sales experienced two major demand peaks, in June and Q4, with December recording the highest sales. These spike are also seen in order volumne and profit. Men's jackets, men's blazers and men's jeans were among the top-selling products, making them important products to monitor during these peak periods.
+
+#### possible factors
+
+**Seasonal and weather changes** -> Changes in weather and temperature may influence clothing purchases. For example, colder temperatures towards the end of the year could increase demand for jackets and blazers, particularly in colder states.
+
+**Holiday shopping and promotional activities** -> June may benefit from mid-year promotions, Father's Day or graduation-related purchases, while December may experience increased shopping due to Christmas, holiday celebrations and end-of-year discounts.
+
+
+- Total returns across all states remained relatively high between April and May, at approximately 620K. Returns then declined slightly by about 40K before rising sharply in July and August to approximately 650K. Interestingly, returns dropped significantly during Q4, even though this was the period with the strongest sales, with December recording the highest sales. This suggests that higher sales do not necessarily translate into higher returns. which trace back to the heatmap correlation where total piece return has low correlation strength with total piece sold
+
+#### Possible Factor 
+
+**Product quality, fit and customer expectations** -> Certain clothing items may have a higher likelihood of being returned because of sizing, fitting or differences between customers' expectations and the actual product. The earlier findings showed that men's jackets, men's blazers and men's jeans were among both the top-selling and most-returned products. Their fit and product descriptions may be worth investigating.
+
+**Return processing time and seasonal purchasing behaviour** -> Customers do not necessarily return products immediately after purchasing them. Some returns may occur days or weeks later. This could explain why Q4 sales were high while recorded returns were low, particularly if many December purchases had not reached the end of their return window by the dataset's closing date.
+
+**MySQL Analysis Result (Filter by MAY)**
+ ![](product_sales_4.png)  
+
+
+- Tuesday, Wednesday, Friday, Saturday and Sunday show a steady increase in sales as the months progress. This suggests that sales activity on these days strengthens over time, rather than remaining constant throughout the year.
+
+#### possible factors
+
+**Customer shopping habits** ->Customers may increasingly prefer shopping on these days because of their personal schedules. Friday and weekends, in particular, may attract more purchases as customers have more time for shopping.
+
+
   
-**To interacte with the Iowa Sales Analysis In MySQL**
+#### To interacte with the Iowa Sales Analysis In MySQL
 [Click Here](liquor_analysis.sql)
 
-### Data Visualization
+## Data Visualization
 
-This visualization highlights key insights from the sales data, showcasing trends across products, counties, and stores. It provides a clear comparison of top-performing and low-performing categories, seasonal sales fluctuations, and revenue contributions. The analysis helps identify patterns in consumer demand and factors influencing sales performance.
+This visualization highlights key insights from the sales data, showcasing trends across productts and State. It provides a clear comparison of top-performing across different State, and how, seasonal sales fluctuations. The analysis helps identify patterns in consumer purchasing power and factors influencing sales performance.
+
+### POWER BI Visualization
 
 **Sales Dashboard**
 ![](Sales_Dashboard.png)
@@ -215,8 +252,7 @@ This visualization highlights key insights from the sales data, showcasing trend
 **Time Series Dashboard**
 ![](Time_Series_Dashboard.png)
 
-**Recommendation & Report Dashboard**
-![](Report_Dashboard.png)
+### Python Viualization
 
 
 **To interacte with the Iowa Liquor Dashboard**
