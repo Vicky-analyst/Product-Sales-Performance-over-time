@@ -1,4 +1,4 @@
-<img width="206" height="191" alt="image" src="https://github.com/user-attachments/assets/aea466da-e9ce-4e5f-af6a-ed4db27f68bf" /># Product-Sales-Performance-over-time
+# Product-Sales-Performance-over-time
 ![](Product_Sales_Pic.png)
 
 ## Project Overview
@@ -226,7 +226,9 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
 **Return processing time and seasonal purchasing behaviour** -> Customers do not necessarily return products immediately after purchasing them. Some returns may occur days or weeks later. This could explain why Q4 sales were high while recorded returns were low, particularly if many December purchases had not reached the end of their return window by the dataset's closing date.
 
 **MySQL Analysis Result (Filter by MAY)**
- ![](product_sales_4.png)  
+Sales & Returns OverTime                  |           Avg Monthly Sales & Returns
+:----------------------------------------:|:------------------------------------------:
+![](product_sales_time1.png)               |         ![](product_sales_time2.png) 
 
 
 - Tuesday, Wednesday, Friday, Saturday and Sunday show a steady increase in sales as the months progress. This suggests that sales activity on these days strengthens over time, rather than remaining constant throughout the year.
@@ -235,10 +237,15 @@ Men's Blazers, Men's Jacket & Men's Jens are the top the most sold product acros
 
 **Customer shopping habits** ->Customers may increasingly prefer shopping on these days because of their personal schedules. Friday and weekends, in particular, may attract more purchases as customers have more time for shopping.
 
+**MySQL Analysis Result (Filter by MAY)**
+![](product_sales_time3.png) 
 
   
-#### To interacte with the Iowa Sales Analysis In MySQL
-[Click Here](liquor_analysis.sql)
+#### To interacte with the Product Sales Performance Analysis In MySQL
+[Click Here](Product_Sales_Analysis.sql)
+
+#### To interacte with the Product Sales Performance Analysis and Visualization In Python
+[Click Here](Product_Sales_Analysis.sql)
 
 ## Data Visualization
 
@@ -246,20 +253,32 @@ This visualization highlights key insights from the sales data, showcasing trend
 
 ### POWER BI Visualization
 
-**Sales Dashboard**
-![](Sales_Dashboard.png)
+**Product Sales Dashboard**
+![](product_sales_dashboard.png)
 
 **Time Series Dashboard**
-![](Time_Series_Dashboard.png)
-
-### Python Viualization
-
+![](product_sales_time_dashboard.png)
 
 **To interacte with the Iowa Liquor Dashboard**
 [Click Here](https://app.powerbi.com/groups/me/reports/21995906-657b-4704-9b00-44314d20f83b/8b551faf76e189e5424d?experience=power-bi)
 
-### Video Of This Project
-### [▶️ Watch Project Video on LinkedIn](https://www.linkedin.com/posts/victoryazubike_dataanalytics-dataprojects-datascience-activity-7355972871690633217-JMqm)
+
+### Python Viualization
+
+Top 10 performing product                 |           Top 10 lowest sold product
+:----------------------------------------:|:------------------------------------------:
+![](product_sales_top10.png)              |         ![](product_sales_bottom10.png) 
+
+
+Sales Trend                               |           Return Trend
+:----------------------------------------:|:------------------------------------------:
+![](product_sales_trend.png)              |         ![](product_sales_returns.png) 
+
+
+Sales by week Trend                       |           Product with high delay risk
+:----------------------------------------:|:------------------------------------------:
+![](product_sales_weekdays.png)              |         ![](product_sales_risk.png) 
+
 
 ## Recommendation
 
